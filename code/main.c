@@ -110,8 +110,6 @@ int main(int argc, char **argv)
 			printf("w_gyro=%f ", w_gyro);
 			printf("\n\n");
 			}
-		
-		
 
 	count++;
 
