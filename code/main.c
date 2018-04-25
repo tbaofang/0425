@@ -6,20 +6,20 @@
 
 #include <sys/types.h>
 #include <sys/stat.h>
-
+#include <sys/socket.h>
+#include <arpa/inet.h>
 #include <fcntl.h>
 #include <termios.h>
-#include <pthread.h>
-#include <socket.h>
 
 #include "serial.h"
-// #include "tcp.h"
+
 
 #define  Odometry_TTY	"/dev/ttyUSB0"
 #define  BUF_SIZE    5000
+#define SERV_IP "127.0.0.1"
+#define SERV_PORT 6667
 
 int    usrt_odo_fd;
-int	   sock_odo_fd;
 
 int main(int argc, char **argv)
 {
@@ -39,6 +39,24 @@ int main(int argc, char **argv)
 	float w_gyro= 0.0f;
 
 
+	int cfd;
+	struct sockaddr_in serv_addr;
+//	socklen_t serv_addr_len;
+    char buf[BUFSIZ];
+    int n;
+
+	cfd = socket(AF_INET, SOCK_STREAM, 0);printf("aa");
+    memset(&serv_addr, 0, sizeof(serv_addr));
+    serv_addr.sin_family = AF_INET;printf("aaw");
+    serv_addr.sin_port = htons(SERV_PORT);
+    inet_pton(AF_INET, SERV_IP, &serv_addr.sin_addr.s_addr);printf("awa");
+	connect(cfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
+
+	printf("sdf");
+
+
+
+	//打开及初始化串口
 	usrt_odo_fd = UART0_Open(usrt_odo_fd, Odometry_TTY);
 	if (usrt_odo_fd < 0)
 	{
@@ -51,6 +69,9 @@ int main(int argc, char **argv)
 		printf("Set Odometry Uart Port Exactly!\n");
 	} while (-1 == ret);
 
+	
+
+	//读串口及处理数据
 	while(1){
 		memset(bu, 0, BUF_SIZE);
 		for(int k=0; k<64; k++){
@@ -62,6 +83,9 @@ int main(int argc, char **argv)
 			if(data[j] == 0xffffffa5){
 				for(int m=j;m<j+32;m++){
 					get_data[m-j] = data[m];
+
+					write(cfd, &data[m], 1);
+
 				}
 				flag = 1;
 			}
@@ -110,6 +134,8 @@ int main(int argc, char **argv)
 			printf("w_gyro=%f ", w_gyro);
 			printf("\n\n");
 
+			// fgets(buf, sizeof(buf), stdin);
+	    	// write(cfd, buf, strlen(buf));
 
 			}
 

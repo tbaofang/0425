@@ -7,14 +7,15 @@
 #include <ctype.h>
 
 #define SERV_IP "127.0.0.1"
-#define SERV_PORT 6666
+#define SERV_PORT 6667
 
 int main(void)
 {
 	int lfd, cfd;
 	struct sockaddr_in serv_addr, clie_addr;
 	socklen_t clie_addr_len;
-	char buf[BUFSIZ], clie_IP[BUFSIZ];
+	char clie_IP[BUFSIZ];
+	char buf[BUFSIZ];
 	int n, i, ret;
 
 	lfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -52,10 +53,13 @@ int main(void)
 		  	ntohs(clie_addr.sin_port));
 	while(1)
 	{
-		n = read(cfd, buf, sizeof(buf));
-		for(i = 0; i < n; i++)
-			buf[i] = toupper(buf[i]);
-		write(cfd, buf, n);
+		n = read(cfd, buf, 1);
+		// printf("%u", buf[0]);
+		// for(i = 0; i < n; i++)
+		// 	buf[i] = toupper(buf[i]);
+		printf("%x ", buf[0]);
+		write(cfd, buf, 1);
+		
 	}
 
 	close(lfd);
