@@ -10,6 +10,7 @@
 #include <fcntl.h>
 #include <termios.h>
 #include <pthread.h>
+#include <socket.h>
 
 #include "serial.h"
 // #include "tcp.h"
@@ -93,22 +94,23 @@ int main(int argc, char **argv)
 				printf("%.2f ", trans_data[n]);
 			}
 			printf("\n");
-				
 			count = -1;
 
-			//计算机器人左轮移动速度vl、左轮移动速度vr、平均速度vk、旋转速度wk、陀螺仪旋转速度w_gyro
+			//计算机器人左轮移动速度vl、左轮移动速度vr、平均速度vk、旋转速度wk、陀螺仪旋转速度w_gyro;
+			//车轮间距：260mm，车轮半径：28mm，数据帧频率：50ms
 			vl = (trans_data[10]-trans_data[0]) / 0.1 * 3.1415926 / 180 * 0.028;
 			vr = (trans_data[11]-trans_data[1]) / 0.1 * 3.1415926 / 180 * 0.028;
 			vk = (vl + vr) / 2;
 			wk = (vl + vr) / 0.26;
 			w_gyro = (trans_data[14]-trans_data[4]) / 0.1;
-
 			printf("vl=%f ", vl);
 			printf("vr=%f ", vr);
 			printf("vk=%f ", vk);
 			printf("wk=%f ", wk);
 			printf("w_gyro=%f ", w_gyro);
 			printf("\n\n");
+
+
 			}
 
 	count++;
