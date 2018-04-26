@@ -6,7 +6,7 @@
 #include <arpa/inet.h>
 
 #define SERV_IP "127.0.0.1"
-#define SERV_PORT 6667
+#define SERV_PORT 9985
 
 int main(void)
 {
