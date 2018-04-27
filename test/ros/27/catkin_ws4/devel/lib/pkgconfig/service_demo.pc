@@ -1,0 +1,8 @@
+prefix=/home/tbf/projects/0425/test/ros/27/catkin_ws4/devel
+
+Name: service_demo
+Description: Description of service_demo
+Version: 0.0.0
+Cflags: -I/home/tbf/projects/0425/test/ros/27/catkin_ws4/devel/include
+Libs: -L/home/tbf/projects/0425/test/ros/27/catkin_ws4/devel/lib 
+Requires: 

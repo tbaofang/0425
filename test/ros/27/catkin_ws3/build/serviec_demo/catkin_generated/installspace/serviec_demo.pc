@@ -1,0 +1,8 @@
+prefix=/home/tbf/projects/0425/test/ros/27/catkin_ws3/install
+
+Name: serviec_demo
+Description: Description of serviec_demo
+Version: 0.0.0
+Cflags: -I/home/tbf/projects/0425/test/ros/27/catkin_ws3/install/include
+Libs: -L/home/tbf/projects/0425/test/ros/27/catkin_ws3/install/lib 
+Requires: 

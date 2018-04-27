@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 	char data[63];
 	unsigned char get_data[32];
 	int flag = 0;
-	float trans_data[20]= {10};
+	float trans_data[20]= {0};
 	int count = 0;
 
 	float vl = 0.0f;
@@ -43,14 +43,12 @@ int main(int argc, char **argv)
     char buf[BUFSIZ];
     int n;
 
-	cfd = socket(AF_INET, SOCK_STREAM, 0);printf("aa");
-    memset(&serv_addr, 0, sizeof(serv_addr));
-    serv_addr.sin_family = AF_INET;printf("aaw");
-    serv_addr.sin_port = htons(SERV_PORT);
-    inet_pton(AF_INET, SERV_IP, &serv_addr.sin_addr.s_addr);printf("awa");
-	connect(cfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
-
-	printf("sdf");
+	// cfd = socket(AF_INET, SOCK_STREAM, 0);
+    // memset(&serv_addr, 0, sizeof(serv_addr));
+    // serv_addr.sin_family = AF_INET;
+    // serv_addr.sin_port = htons(SERV_PORT);
+    // inet_pton(AF_INET, SERV_IP, &serv_addr.sin_addr.s_addr);
+	// connect(cfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
 
 	//打开及初始化串口
 	usrt_odo_fd = UART0_Open(usrt_odo_fd, Odometry_TTY);
@@ -77,9 +75,7 @@ int main(int argc, char **argv)
 			if(data[j] == 0xffffffa5){
 				for(int m=j;m<j+32;m++){
 					get_data[m-j] = data[m];
-
-					write(cfd, &data[m], 1);
-
+					// write(cfd, &data[m], 1);
 				}
 				flag = 1;
 			}
@@ -128,7 +124,7 @@ int main(int argc, char **argv)
 			printf("wk=%f ", wk);
 			printf("w_gyro=%f ", w_gyro);
 			printf("\n\n");
-			}
+		}
 	count++;	
 	}
 	return 0;

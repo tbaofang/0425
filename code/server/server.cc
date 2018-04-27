@@ -7,7 +7,7 @@
 #include <ctype.h>
 
 #define SERV_IP "192.168.1.111"
-#define SERV_PORT 9985
+#define SERV_PORT 9855
 
 int main(void)
 {

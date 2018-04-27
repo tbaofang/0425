@@ -1,0 +1,8 @@
+prefix=/home/tbf/projects/0425/test/ros/27/catkin_ws1/install
+
+Name: topic_demo
+Description: Description of topic_demo
+Version: 0.0.0
+Cflags: -I/home/tbf/projects/0425/test/ros/27/catkin_ws1/install/include
+Libs: -L/home/tbf/projects/0425/test/ros/27/catkin_ws1/install/lib 
+Requires: roscpp rospy std_msgs message_runtime

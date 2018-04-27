@@ -1,0 +1,2 @@
+service_demo
+-DCATKIN_DEVEL_PREFIX=/home/tbf/projects/0425/test/ros/27/catkin_ws4/devel -DCMAKE_INSTALL_PREFIX=/home/tbf/projects/0425/test/ros/27/catkin_ws4/install -G Unix Makefiles

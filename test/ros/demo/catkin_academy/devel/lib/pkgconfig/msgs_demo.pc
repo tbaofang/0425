@@ -1,0 +1,8 @@
+prefix=/home/tbf/projects/0425/test/ros/demo/catkin_academy/devel
+
+Name: msgs_demo
+Description: Description of msgs_demo
+Version: 0.0.1
+Cflags: -I/home/tbf/projects/0425/test/ros/demo/catkin_academy/devel/include
+Libs: -L/home/tbf/projects/0425/test/ros/demo/catkin_academy/devel/lib 
+Requires: message_runtime std_msgs nav_msgs sensor_msgs actionlib_msgs std_srvs
