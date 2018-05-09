@@ -1,8 +1,0 @@
-prefix=/home/tbf/projects/0425/test/ros/27/catkin_ws2/devel
-
-Name: topic_demo
-Description: Description of topic_demo
-Version: 0.0.0
-Cflags: -I/home/tbf/projects/0425/test/ros/27/catkin_ws2/devel/include
-Libs: -L/home/tbf/projects/0425/test/ros/27/catkin_ws2/devel/lib 
-Requires: 

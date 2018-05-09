@@ -1,8 +1,0 @@
-prefix=/home/tbf/projects/0425/test/ros/demo/catkin_academy/install
-
-Name: param_demo
-Description: Description of param_demo
-Version: 0.0.1
-Cflags: 
-Libs: -L/home/tbf/projects/0425/test/ros/demo/catkin_academy/install/lib -lparam_demo
-Requires: roscpp

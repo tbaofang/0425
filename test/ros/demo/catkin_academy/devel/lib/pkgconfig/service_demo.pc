@@ -1,8 +1,0 @@
-prefix=/home/tbf/projects/0425/test/ros/demo/catkin_academy/devel
-
-Name: service_demo
-Description: Description of service_demo
-Version: 0.0.0
-Cflags: -I/home/tbf/projects/0425/test/ros/demo/catkin_academy/devel/include
-Libs: -L/home/tbf/projects/0425/test/ros/demo/catkin_academy/devel/lib -lservice_demo
-Requires: message_runtime
