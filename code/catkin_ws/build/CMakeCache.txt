@@ -361,6 +361,12 @@ serial_DIR:PATH=/home/tbf/projects/work/test/odom_pose/devel/share/serial/cmake
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
 
+//Value Computed by CMake
+test_BINARY_DIR:STATIC=/home/tbf/projects/0425/code/catkin_ws/build/test
+
+//Value Computed by CMake
+test_SOURCE_DIR:STATIC=/home/tbf/projects/0425/code/catkin_ws/src/test
+
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
 
@@ -466,7 +472,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

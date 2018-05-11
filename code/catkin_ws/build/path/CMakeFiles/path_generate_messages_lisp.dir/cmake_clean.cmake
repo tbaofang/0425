@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/path_generate_messages_lisp"
+  "/home/tbf/projects/0425/code/catkin_ws/devel/share/common-lisp/ros/path/msg/myLaser.lisp"
   "/home/tbf/projects/0425/code/catkin_ws/devel/share/common-lisp/ros/path/msg/serial.lisp"
 )
 

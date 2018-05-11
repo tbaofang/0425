@@ -13,10 +13,11 @@ find_package(catkin REQUIRED COMPONENTS
   serial
   message_generation
 )
-add_message_files(FILES serial.msg)
+add_message_files(FILES serial.msg myLaser.msg)
 generate_messages(DEPENDENCIES std_msgs)
 
-
+#add_message_files(FILES myLaser.msg)
+#generate_messages(DEPENDENCIES std_msgs)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -214,3 +215,9 @@ target_link_libraries(showpath_serial ${catkin_LIBRARIES})
 
 add_executable(showpath_show src/showpath_show.cpp)
 target_link_libraries(showpath_show ${catkin_LIBRARIES})
+
+add_executable(laser_serial src/laser_serial)
+target_link_libraries(laser_serial ${catkin_LIBRARIES})
+
+add_executable(laser_show src/laser_show)
+target_link_libraries(laser_show ${catkin_LIBRARIES})

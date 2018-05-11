@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/tbf/projects/0425/code/catkin_ws/src/path/msg/serial.msg"
+messages_str = "/home/tbf/projects/0425/code/catkin_ws/src/path/msg/serial.msg;/home/tbf/projects/0425/code/catkin_ws/src/path/msg/myLaser.msg"
 services_str = ""
 pkg_name = "path"
 dependencies_str = "std_msgs"

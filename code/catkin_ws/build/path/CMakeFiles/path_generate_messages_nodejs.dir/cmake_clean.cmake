@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/path_generate_messages_nodejs"
+  "/home/tbf/projects/0425/code/catkin_ws/devel/share/gennodejs/ros/path/msg/myLaser.js"
   "/home/tbf/projects/0425/code/catkin_ws/devel/share/gennodejs/ros/path/msg/serial.js"
 )
 

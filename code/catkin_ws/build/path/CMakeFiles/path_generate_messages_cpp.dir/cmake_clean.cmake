@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/path_generate_messages_cpp"
+  "/home/tbf/projects/0425/code/catkin_ws/devel/include/path/myLaser.h"
   "/home/tbf/projects/0425/code/catkin_ws/devel/include/path/serial.h"
 )
 

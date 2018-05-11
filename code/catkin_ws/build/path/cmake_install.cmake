@@ -33,7 +33,10 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path/msg" TYPE FILE FILES "/home/tbf/projects/0425/code/catkin_ws/src/path/msg/serial.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path/msg" TYPE FILE FILES
+    "/home/tbf/projects/0425/code/catkin_ws/src/path/msg/serial.msg"
+    "/home/tbf/projects/0425/code/catkin_ws/src/path/msg/myLaser.msg"
+    )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")

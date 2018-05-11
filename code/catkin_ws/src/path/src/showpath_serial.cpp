@@ -1,7 +1,6 @@
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 #include <boost/asio.hpp>
-// #include <nav_msgs/Path.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <tf/tf.h>
 #include <path/serial.h>
@@ -33,22 +32,16 @@ int main(int argc, char** argv)
     ros::init(argc, argv, "showpath_serial");
     ros::NodeHandle n;
     ros::Publisher serial_pub = n.advertise<path::serial>("serial", 1, true);
-    // ros::Publisher path_pub = n.advertise<std_msgs::String>("chatter", 1000);
     
-
     io_service iosev;
     serial_port sp(iosev, "/dev/ttyUSB0");
+
+    //设置串口参数
     sp.set_option(serial_port::baud_rate(115200));
     sp.set_option(serial_port::flow_control());
     sp.set_option(serial_port::parity());
     sp.set_option(serial_port::stop_bits());
     sp.set_option(serial_port::character_size(8));
-
-    // ros::Time current_time, last_time;
-    // current_time = last_time = ros::Time::now();
-    // nav_msgs::Path path;
-    // path.header.stamp = current_time;
-    // path.header.frame_id = "odo";
 
     ros::Rate loop_rate(30);  
     path::serial msg;  
@@ -124,30 +117,6 @@ int main(int argc, char** argv)
         ROS_INFO("msg.vx = %f, msg.wk = %f", msg.vk, msg.wk);
         serial_pub.publish(msg);
         loop_rate.sleep();
-
-        // delta_x = vk * cos(th) * 0.1;
-        // delta_y = vk * sin(th) * 0.1;
-        // delta_th = wk * 0.1;
-        // x += delta_x;
-        // y += delta_y;
-        // th += delta_th;
-
-        // geometry_msgs::PoseStamped pose_stamped;
-        // pose_stamped.pose.position.x = x;
-        // pose_stamped.pose.position.y = y;
-
-        // geometry_msgs::Quaternion goal_quat = tf::createQuaternionMsgFromYaw(th);
-
-        // pose_stamped.pose.orientation = goal_quat;
-        // pose_stamped.header.stamp = current_time;
-        // pose_stamped.header.frame_id = "odo";
-        // path.poses.push_back(pose_stamped);
-
-        // path_pub.publish(path);
-        // ros::spinOnce();
-        // loop_rate.sleep();
-
-
     }
     return 0;
 }

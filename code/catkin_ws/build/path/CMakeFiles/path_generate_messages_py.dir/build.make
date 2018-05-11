@@ -53,21 +53,29 @@ CMAKE_BINARY_DIR = /home/tbf/projects/0425/code/catkin_ws/build
 # Include the progress variables for this target.
 include path/CMakeFiles/path_generate_messages_py.dir/progress.make
 
+path/CMakeFiles/path_generate_messages_py: /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/_myLaser.py
 path/CMakeFiles/path_generate_messages_py: /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/_serial.py
 path/CMakeFiles/path_generate_messages_py: /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/__init__.py
 
 
+/home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/_myLaser.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/_myLaser.py: /home/tbf/projects/0425/code/catkin_ws/src/path/msg/myLaser.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tbf/projects/0425/code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG path/myLaser"
+	cd /home/tbf/projects/0425/code/catkin_ws/build/path && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/tbf/projects/0425/code/catkin_ws/src/path/msg/myLaser.msg -Ipath:/home/tbf/projects/0425/code/catkin_ws/src/path/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p path -o /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg
+
 /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/_serial.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/_serial.py: /home/tbf/projects/0425/code/catkin_ws/src/path/msg/serial.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tbf/projects/0425/code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG path/serial"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tbf/projects/0425/code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG path/serial"
 	cd /home/tbf/projects/0425/code/catkin_ws/build/path && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/tbf/projects/0425/code/catkin_ws/src/path/msg/serial.msg -Ipath:/home/tbf/projects/0425/code/catkin_ws/src/path/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p path -o /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg
 
 /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/__init__.py: /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/_myLaser.py
 /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/__init__.py: /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/_serial.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tbf/projects/0425/code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for path"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tbf/projects/0425/code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for path"
 	cd /home/tbf/projects/0425/code/catkin_ws/build/path && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg --initpy
 
 path_generate_messages_py: path/CMakeFiles/path_generate_messages_py
+path_generate_messages_py: /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/_myLaser.py
 path_generate_messages_py: /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/_serial.py
 path_generate_messages_py: /home/tbf/projects/0425/code/catkin_ws/devel/lib/python2.7/dist-packages/path/msg/__init__.py
 path_generate_messages_py: path/CMakeFiles/path_generate_messages_py.dir/build.make

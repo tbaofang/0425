@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="path" type="laser_serial" name="laser_serial" />
+    <node pkg="path" type="laser_show" name="laser_show" />
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find path)/rviz/laser_show.rviz" />
+</launch>

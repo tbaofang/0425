@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/tbf/projects/0425/code/catkin_ws/devel/lib;/home/tbf/projects/0425/test/ros/demo/catkin_academy/devel/lib;/home/tbf/projects/train/examples/turtlebot/devel/lib;/home/tbf/projects/work/test/odom_pose/devel/lib;/home/tbf/projects/train/examples/ros_tutorials/devel/lib;/home/tbf/projects/train/0404/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/tbf/projects/0425/code/catkin_ws/devel/lib;/home/tbf/projects/0425/code/catkin_ws/devel/lib;/home/tbf/projects/0425/test/ros/demo/catkin_academy/devel/lib;/home/tbf/projects/train/examples/turtlebot/devel/lib;/home/tbf/projects/work/test/odom_pose/devel/lib;/home/tbf/projects/train/examples/ros_tutorials/devel/lib;/home/tbf/projects/train/0404/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
